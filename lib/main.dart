@@ -8,7 +8,15 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Colors.orange,
+            Colors.blue[500],
+            Colors.blue[900],
+          ],
+        )),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
