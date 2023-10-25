@@ -18,6 +18,19 @@ class Containers extends StatelessWidget {
           end: FractionalOffset.bottomCenter,
         ),
       ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          // Background Image
+          Image.asset('assets/Rectangle 4.png'),
+
+          // Foreground Image
+          Positioned(
+            top: 50,
+            child: Image.asset('assets/Menu lines.png'),
+          )
+        ],
+      ),
     ));
   }
 }
