@@ -49,14 +49,19 @@ class LoginScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             )),
                         TextSpan(
-                          text: 'Back',
-                          style: TextStyle(
-                            color: Colors.yellow,
-                            fontSize: 34,
-                            fontWeight: FontWeight.bold,
-                            decorationStyle: TextDecorationStyle.double,
-                          ),
-                        )
+                            text: 'Back',
+                            style: TextStyle(
+                              color: Colors.yellow,
+                              fontSize: 34,
+                              fontWeight: FontWeight.bold,
+                              decorationStyle: TextDecorationStyle.double,
+                            )),
+                        TextSpan(
+                            text: ',',
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 34,
+                                fontWeight: FontWeight.bold)),
                       ]),
                 ),
               ),
