@@ -9,10 +9,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [LoginScreen()],
-      ),
-    );
+        // appBar: AppBar(
+        //   title: const Text('My App'),
+        // ),
+        body: LoginScreen());
   }
 }
