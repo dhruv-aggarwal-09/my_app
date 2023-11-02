@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Containers extends StatelessWidget {
   const Containers({Key? key}) : super(key: key);
@@ -6,6 +8,7 @@ class Containers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: null,
         body: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -27,6 +30,14 @@ class Containers extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Image.asset('assets/Rectangle 4.png'),
+                    )),
+                const Positioned(
+                    left: 25,
+                    top: 23,
+                    child: FaIcon(
+                      FontAwesomeIcons.bars,
+                      color: Colors.white,
+                      size: 24,
                     ))
               ],
             )));
