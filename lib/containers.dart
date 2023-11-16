@@ -8,38 +8,84 @@ class Containers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: null,
-        body: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.yellow[800]!,
-                  Colors.yellow[600]!,
+      appBar: null, // No app bar
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.yellow[800]!,
+              Colors.yellow[600]!,
+            ],
+            stops: const [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+          ),
+        ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  const FaIcon(
+                    FontAwesomeIcons.bars,
+                    color: Colors.white,
+                    size: 24,
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Row(
+                        children: [
+                          FaIcon(
+                            // ignore: deprecated_member_use
+                            FontAwesomeIcons.search,
+                            color: Colors.grey,
+                          ),
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: 'Search',
+                                border: InputBorder.none,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
-                stops: const [0.0, 1.0],
-                begin: FractionalOffset.topCenter,
-                end: FractionalOffset.bottomCenter,
               ),
             ),
-            child: Stack(
-              alignment: Alignment.topLeft,
-              children: [
-                Positioned(
-                    left: 0,
-                    top: 0,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Image.asset('assets/Rectangle 4.png'),
-                    )),
-                const Positioned(
-                    left: 25,
-                    top: 23,
-                    child: FaIcon(
-                      FontAwesomeIcons.bars,
-                      color: Colors.white,
-                      size: 24,
-                    ))
-              ],
-            )));
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                ),
+                itemBuilder: (context, index) {
+                  return Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.grey[300],
+                    // child: Center(child: Text),
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                  );
+                },
+                itemCount: 6,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
