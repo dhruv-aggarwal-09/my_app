@@ -71,13 +71,20 @@ class Containers extends StatelessWidget {
                   mainAxisSpacing: 16,
                 ),
                 itemBuilder: (context, index) {
-                  return Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.grey[300],
-                    // child: Center(child: Text),
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[600],
+                      ),
+                      child: const Center(
+                          child: Text('17-11-2023',
+                              style: TextStyle(color: Colors.black))),
+                    ),
+                    // Add text in the center of the container
                   );
                 },
                 itemCount: 6,

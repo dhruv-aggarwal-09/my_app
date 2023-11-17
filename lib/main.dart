@@ -3,7 +3,8 @@ import 'package:my_app/containers.dart';
 import 'package:flutter/services.dart';
 // import 'package:my_app/login_page.dart';
 
-void main() => runApp(const MaterialApp(home: Home()));
+void main() =>
+    runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
