@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/containers.dart';
+// import 'package:my_app/containers.dart';
 import 'package:flutter/services.dart';
+import 'package:my_app/sidebar_page.dart';
 // import 'package:my_app/login_page.dart';
 
 void main() =>
@@ -27,7 +28,8 @@ class _HomeState extends State<Home> {
     return const Scaffold(
       appBar: null,
       // body: LoginScreen(),
-      body: Containers(),
+      // body: Containers(),
+      body: SideBar(),
     );
   }
 }

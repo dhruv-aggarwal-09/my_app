@@ -37,7 +37,7 @@ class Containers extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.grey[800],
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: const Row(
@@ -51,6 +51,7 @@ class Containers extends StatelessWidget {
                           Expanded(
                             child: TextField(
                               decoration: InputDecoration(
+                                hintStyle: TextStyle(color: Colors.grey),
                                 hintText: 'Search',
                                 border: InputBorder.none,
                               ),
